@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss public/style.css -w",
     "devserver": "live-server",
     "start": "nodemon server.js",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
@@ -21,6 +21,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "node-sass": "^5.0.0",
     "sass": "^1.30.0"
   }
 }
