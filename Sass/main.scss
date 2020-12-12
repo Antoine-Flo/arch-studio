@@ -1,4 +1,9 @@
 @import "components";
 @import "base";
 @import "layout";
-@import "home";
+
+
+@import"./pages/about";
+@import"./pages/contact";
+@import"./pages/home";
+@import"./pages/portfolio";

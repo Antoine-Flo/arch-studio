@@ -11,5 +11,6 @@ body {
 html {
   font-size: 62.5%; }
 
-.home__title {
-  font-size: 30rem; }
+.slider__title {
+  font-size: 30rem;
+  color: red; }
