@@ -11,6 +11,5 @@ body {
 html {
   font-size: 62.5%; }
 
-.slider__title {
-  font-size: 30rem;
-  color: red; }
+.slider__img {
+  width: 40%; }
