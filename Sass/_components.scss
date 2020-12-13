@@ -1,14 +1,19 @@
 .home {
-    position: absolute;
-    top: 14rem;
+    position: relative;
+    width: 89%;
+    max-width: 1400px;
+    margin: 0 auto;
+
 
     &__link {
+        position: absolute;
+        top: 14rem;
         font-family: "Spartan";
         writing-mode: vertical-lr;
-        color: $light-gray;
-        font-size: 3rem;
-        letter-spacing: 3rem;
-        // text-orientation: sideways;
+        color: #c9cdd9;
+        font-size: 1.5rem;
+        letter-spacing: 1.7rem;
+    
 
         &,
         &:visited,
@@ -19,11 +24,11 @@
         &::before {
             content: "";
             position: absolute;
-            top: -15rem;
-            left: 2rem;
-            height: 120px;
-            width: 5px;
-            background-color: red;
+            top: -139px;
+            left: 12;
+            height: 104px;
+            width: 1px;
+            background-color: $light-gray;
         }
     }
 

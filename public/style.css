@@ -1,22 +1,26 @@
 .home {
-  position: absolute;
-  top: 14rem; }
+  position: relative;
+  width: 89%;
+  max-width: 1400px;
+  margin: 0 auto; }
   .home__link {
+    position: absolute;
+    top: 14rem;
     font-family: "Spartan";
     writing-mode: vertical-lr;
     color: #c9cdd9;
-    font-size: 3rem;
-    letter-spacing: 3rem; }
+    font-size: 1.5rem;
+    letter-spacing: 1.7rem; }
     .home__link, .home__link:visited, .home__link:link {
       text-decoration: none; }
     .home__link::before {
       content: "";
       position: absolute;
-      top: -15rem;
-      left: 2rem;
-      height: 120px;
-      width: 5px;
-      background-color: red; }
+      top: -139px;
+      left: 12;
+      height: 104px;
+      width: 1px;
+      background-color: #c9cdd9; }
 
 .nav {
   height: 10rem;
@@ -46,7 +50,8 @@
   box-sizing: inherit; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: white; }
 
 html {
   font-size: 62.5%; }
