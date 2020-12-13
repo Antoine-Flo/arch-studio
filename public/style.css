@@ -1,3 +1,43 @@
+.home {
+  position: absolute;
+  top: 14rem; }
+  .home__link {
+    font-family: "Spartan";
+    writing-mode: vertical-lr;
+    color: #c9cdd9;
+    font-size: 3rem;
+    letter-spacing: 3rem; }
+    .home__link, .home__link:visited, .home__link:link {
+      text-decoration: none; }
+    .home__link::before {
+      content: "";
+      position: absolute;
+      top: -15rem;
+      left: 2rem;
+      height: 120px;
+      width: 5px;
+      background-color: red; }
+
+.nav {
+  height: 10rem;
+  max-width: 1300px;
+  padding: 0 10rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; }
+  .nav__logo {
+    margin-right: 5rem; }
+  .nav__links {
+    display: flex; }
+  .nav__link {
+    margin: 3rem;
+    font-size: 2rem;
+    font-family: "Spartan";
+    color: #7f8490;
+    font-weight: bold; }
+    .nav__link, .nav__link:visited, .nav__link:link {
+      text-decoration: none; }
+
 *,
 *::after,
 *::before {
@@ -11,5 +51,8 @@ body {
 html {
   font-size: 62.5%; }
 
-.slider__img {
-  width: 40%; }
+.slider {
+  margin: 0 auto;
+  max-width: 1000px; }
+  .slider__img {
+    width: 40%; }
