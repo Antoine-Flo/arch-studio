@@ -1,6 +1,61 @@
+.hidden {
+  visibility: hidden; }
+
+.btn {
+  cursor: pointer;
+  background-color: #1b1d23;
+  color: #f0f0f5;
+  font-family: "Spartan";
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3.6rem;
+  font-size: 1.6rem; }
+  .btn:hover {
+    background-color: #f0f0f5;
+    color: #60636c; }
+  .btn, .btn:link, .btn:visited {
+    border: none; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+  background-color: white; }
+
+html {
+  font-size: 62.5%; }
+
+.nav {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%;
+  height: 10rem;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center; }
+  .nav__logo {
+    margin-right: 5rem; }
+  .nav__links {
+    display: flex; }
+  .nav__link {
+    margin: 3rem;
+    font-size: 1.5rem;
+    font-family: "Spartan";
+    color: #7f8490;
+    font-weight: bold; }
+    .nav__link, .nav__link:visited, .nav__link:link {
+      text-decoration: none; }
+
 .home {
   position: relative;
-  width: 89%;
+  width: 91%;
   max-width: 1400px;
   margin: 0 auto; }
   .home__link {
@@ -22,42 +77,142 @@
       width: 1px;
       background-color: #c9cdd9; }
 
-.nav {
-  height: 10rem;
-  max-width: 1300px;
-  padding: 0 10rem;
+.footer {
   margin: 0 auto;
+  max-width: 1110px;
+  width: 82%; }
+
+.tour__gallery {
+  margin: 20px auto;
+  max-width: 800px;
+  height: 350px;
+  overflow: hidden;
+  position: relative; }
+
+.picture__slider {
   display: flex;
-  align-items: center; }
-  .nav__logo {
-    margin-right: 5rem; }
-  .nav__links {
-    display: flex; }
-  .nav__link {
-    margin: 3rem;
-    font-size: 2rem;
-    font-family: "Spartan";
-    color: #7f8490;
-    font-weight: bold; }
-    .nav__link, .nav__link:visited, .nav__link:link {
-      text-decoration: none; }
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 500%; }
 
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit; }
+.carousel__image {
+  list-style: none;
+  flex-shrink: 0;
+  flex-basis: 20%;
+  height: 100%;
+  padding-bottom: 0;
+  background-color: #ebeced; }
 
-body {
-  box-sizing: border-box;
-  background-color: white; }
+.carousel__image img {
+  min-width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  background-color: #ebeced; }
 
-html {
-  font-size: 62.5%; }
+.controls .btn--next {
+  margin-top: 0;
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #fbf9f9;
+  font-size: 24px; }
+
+.controls .btn--prev {
+  margin-top: 0;
+  padding: 10px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #fbf9f9;
+  font-size: 24px; }
+
+.controls button:hover {
+  background: #7b666663; }
+
+.is-hidden {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .tour__gallery {
+    float: none;
+    width: 100%; }
+  .tour__gallery {
+    min-height: 300px;
+    max-height: 300px; }
+  .tour__gallery img {
+    height: 300px; }
+  .controls .btn--next,
+  .controls .btn--prev {
+    background: #7b666663 !important; } }
 
 .slider {
   margin: 0 auto;
-  max-width: 1000px; }
+  max-width: 1110px;
+  width: 82%;
+  position: relative; }
   .slider__img {
-    width: 40%; }
+    width: 100%; }
+  .slider__title {
+    position: absolute;
+    left: 16%;
+    top: 23%;
+    line-height: 8rem;
+    font-size: 8rem;
+    color: white;
+    font-family: "Spartan"; }
+  .slider__info {
+    position: absolute;
+    left: 16%;
+    line-height: 2.5rem;
+    width: 38%;
+    top: 46%;
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Spartan"; }
+  .slider__btn {
+    position: absolute;
+    left: 16%;
+    top: 62%; }
+  .slider__btn-text {
+    font-weight: 700;
+    margin-right: 20px; }
+  .slider__btn-arrow {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
+  .slider__num--white {
+    background-color: white;
+    color: #7f8490; }
+  .slider__nav {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: -81px; }
+
+.welcome {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%;
+  margin-top: 8rem; }
+
+.about {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%; }
+
+.featured {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%; }

@@ -5,3 +5,14 @@ $dark-gray: hsl(226, 6%, 40%);
 $medium-gray: hsl(223, 7%, 53%);
 $light-gray: hsl(225, 17%, 82%);
 $very-ligh-gray: hsl(230, 21%, 95%);
+
+
+@mixin container {
+    margin: 0 auto;
+    max-width: 1110px;
+    width: 82%;
+}
+
+.hidden {
+    visibility: hidden;
+}

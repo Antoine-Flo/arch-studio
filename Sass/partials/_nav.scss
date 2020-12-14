@@ -1,0 +1,62 @@
+.nav {
+    @include container;
+    height: 10rem;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+  
+    &__logo {
+      margin-right: 5rem;
+    }
+  
+    &__links {
+      display: flex;
+    }
+  
+    &__link {
+      margin: 3rem;
+      font-size: 1.5rem;
+      font-family: "Spartan";
+      color: $medium-gray;
+      font-weight: bold;
+  
+      &,
+      &:visited,
+      &:link {
+        text-decoration: none;
+      }
+    }
+}
+
+.home {
+  position: relative;
+  width: 91%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__link {
+    position: absolute;
+    top: 14rem;
+    font-family: "Spartan";
+    writing-mode: vertical-lr;
+    color: #c9cdd9;
+    font-size: 1.5rem;
+    letter-spacing: 1.7rem;
+
+    &,
+    &:visited,
+    &:link {
+      text-decoration: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -139px;
+      left: 12;
+      height: 104px;
+      width: 1px;
+      background-color: $light-gray;
+    }
+  }
+}
