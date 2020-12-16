@@ -82,86 +82,20 @@ html {
   max-width: 1110px;
   width: 82%; }
 
-.tour__gallery {
-  margin: 20px auto;
-  max-width: 800px;
-  height: 350px;
-  overflow: hidden;
-  position: relative; }
-
-.picture__slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
-  width: 500%; }
-
-.carousel__image {
-  list-style: none;
-  flex-shrink: 0;
-  flex-basis: 20%;
-  height: 100%;
-  padding-bottom: 0;
-  background-color: #ebeced; }
-
-.carousel__image img {
-  min-width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  background-color: #ebeced; }
-
-.controls .btn--next {
-  margin-top: 0;
-  padding: 10px;
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #fbf9f9;
-  font-size: 24px; }
-
-.controls .btn--prev {
-  margin-top: 0;
-  padding: 10px;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #fbf9f9;
-  font-size: 24px; }
-
-.controls button:hover {
-  background: #7b666663; }
-
-.is-hidden {
-  display: none; }
-
-@media screen and (max-width: 768px) {
-  .tour__gallery {
-    float: none;
-    width: 100%; }
-  .tour__gallery {
-    min-height: 300px;
-    max-height: 300px; }
-  .tour__gallery img {
-    height: 300px; }
-  .controls .btn--next,
-  .controls .btn--prev {
-    background: #7b666663 !important; } }
-
 .slider {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
   position: relative; }
+  .slider__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 200px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
+  .slider__content {
+    transition: all 0.2s;
+    grid-area: 1 / 1 / 2 / 2; }
   .slider__img {
     width: 100%; }
   .slider__title {
@@ -192,14 +126,25 @@ html {
     width: 20px;
     height: 20px;
     filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
-  .slider__num--white {
+  .slider__num {
     background-color: white;
     color: #7f8490; }
+    .slider__num:focus {
+      outline: none;
+      border: none;
+      color: #f0f0f5;
+      background-color: #1b1d23; }
   .slider__nav {
     display: flex;
     position: absolute;
     bottom: 0;
     left: -81px; }
+
+.hide {
+  opacity: 0; }
+
+.open {
+  opacity: 1; }
 
 .welcome {
   margin: 0 auto;

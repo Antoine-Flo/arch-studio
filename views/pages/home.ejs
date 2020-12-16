@@ -2,91 +2,78 @@
 <%- include('../partials/nav.ejs'); -%>
 
 
-<div class="tour__gallery">
-    <ul class="picture__slider">
-        <li class="carousel__image">
-            <img src="https://images.pexels.com/photos/302892/pexels-photo-302892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Vanilla Carousel Javascript" />
-        </li>
-        <li class="carousel__image">
-            <img src=""
-                data-src="https://images.pexels.com/photos/302889/pexels-photo-302889.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                alt="Vanilla Carousel Javascript" />
-        </li>
-        <li class="carousel__image">
-            <img src=""
-                data-src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-                alt="Vanilla Carousel Javascript" />
-        </li>
-        <li class="carousel__image">
-            <img src=""
-                data-src="https://images.pexels.com/photos/1308751/pexels-photo-1308751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                alt="Vanilla Carousel Javascript" />
-        </li>
-        <li class="carousel__image">
-            <img src=""
-                data-src="https://images.pexels.com/photos/935981/pexels-photo-935981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                alt="Vanilla Carousel Javascript" />
-        </li>
-    </ul>
-    <div class="controls">
-        <button class="btn--prev is-hidden">Prev
-        </button>
-        <button class="btn--next">Next
-        </button>
-    </div>
-</div>
-
-
 
 <div class="slider">
 
-    <div class="slider__card">
-        <h1 class="slider__title">Project <br> Paramour</h1>
+    <div class="slider__cards">
 
-        <img src="assets/home/desktop/image-hero-paramour.jpg" alt="photo federal" class="slider__img">
-        <p class="slider__info">
-            Project made for an art museum near Southwest London. Project Paramour is
-            a statement of bold, modern architecture.
-        </p>
+        <div class="slider__content" id="slide-1">
+            <h1 class="slider__title">Project <br> Paramour</h1>
+            <img src="assets/home/desktop/image-hero-paramour.jpg" alt="photo federal" class="slider__img">
+            <p class="slider__info">
+                Project made for an art museum near Southwest London. Project Paramour is
+                a statement of bold, modern architecture.
+            </p>
+            <button class="slider__btn btn">
+                <p class="slider__btn-text">See Our Portfolio</p> <img class="slider__btn-arrow"
+                    src="assets/icons/icon-arrow.svg" alt="" srcset="">
+            </button>
+        </div>
 
-        <button class="slider__btn btn">
-            <p class="slider__btn-text">See Our Portfolio</p> <img class="slider__btn-arrow"
-                src="assets/icons/icon-arrow.svg" alt="" srcset="">
-        </button>
+
+        <div class="slider__content hide" id="slide-2">
+            <h1 class="slider__title">Seraph <br> Station</h1>
+            <img src="assets/home/desktop/image-hero-seraph.jpg" alt="photo federal" class="slider__img">
+            <p class="slider__info">
+                The Seraph Station project challenged us to design a unique station that would
+                transport people through time. The result is a fresh and futuristic model
+                inspired by space stations.
+            </p>
+            <button class="slider__btn btn">
+                <p class="slider__btn-text">See Our Portfolio</p> <img class="slider__btn-arrow"
+                    src="assets/icons/icon-arrow.svg" alt="" srcset="">
+            </button>
+        </div>
+
+
+        <div class="slider__content hide" id="slide-3">
+            <h1 class="slider__title">Federal II <br> Tower</h1>
+            <img src="assets/home/desktop/image-hero-federal.jpg" alt="photo federal" class="slider__img">
+            <p class="slider__info">
+                A sequel theme project for a tower originally built in the 1800s. We achieved
+                this with a striking look of brutal minimalism with modern touches.
+            </p>
+            <button class="slider__btn btn">
+                <p class="slider__btn-text">See Our Portfolio</p> <img class="slider__btn-arrow"
+                    src="assets/icons/icon-arrow.svg" alt="" srcset="">
+            </button>
+        </div>
+
+
+        <div class="slider__content hide" id="slide-4">
+            <h1 class="slider__title">Trinity Bank <br> Tower</h1>
+
+            <img src="assets/home/desktop/image-hero-trinity.jpg" alt="photo federal" class="slider__img">
+            <p class="slider__info">
+                Trinity Bank challenged us to make a concept for a 84 story building located
+                in the middle of a city with a high earthquake frequency. For this project we
+                used curves to blend design and stability to meet our objectives.
+            </p>
+            <button class="slider__btn btn">
+                <p class="slider__btn-text">See Our Portfolio</p> <img class="slider__btn-arrow"
+                    src="assets/icons/icon-arrow.svg" alt="" srcset="">
+            </button>
+        </div>
+
+
 
         <div class="slider__nav">
-            <button href="#" class="btn slider__num slider__num-1">1</button>
-            <button href="#" class="btn slider__num slider__num-2 slider__num--white">2</button>
-            <button href="#" class="btn slider__num slider__num-3">3</button>
-            <button href="#" class="btn slider__num slider__num-4">4</button>
+            <button id="1" onclick="slide(this.id)" class="btn slider__num" autofocus>1</button>
+            <button id="2" onclick="slide(this.id)" class="btn slider__num">2</button>
+            <button id="3" onclick="slide(this.id)" class="btn slider__num">3</button>
+            <button id="4" onclick="slide(this.id)" class="btn slider__num">4</button>
         </div>
     </div>
-
-
-    <!-- Seraph Station
-
-    The Seraph Station project challenged us to design a unique station that would
-    transport people through time. The result is a fresh and futuristic model
-    inspired by space stations.
-
-    See Our Portfolio
-
-    Federal II Tower
-
-    A sequel theme project for a tower originally built in the 1800s. We achieved
-    this with a striking look of brutal minimalism with modern touches.
-
-    See Our Portfolio
-
-    Trinity Bank Tower
-
-    Trinity Bank challenged us to make a concept for a 84 story building located
-    in the middle of a city with a high earthquake frequency. For this project we
-    used curves to blend design and stability to meet our objectives.
-
-    See Our Portfolio -->
-
 
 
 </div>
