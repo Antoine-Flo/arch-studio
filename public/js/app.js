@@ -4,7 +4,6 @@ function slide(id) {
     let targetSlide = document.getElementById("slide-" + id);
     let button = document.getElementById(id);
 
-    console.log(button);
 
     allSlides.forEach(slide => {
         if (slide.id === targetSlide.id) {
