@@ -13,19 +13,27 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
 app.get('/', function (req, res) {
-    res.render('pages/home')
+    res.render('pages/home', {
+        pageName: 'HOME'
+    })
 });
 
 app.get('/contact', (req, res) => {
-    res.render('pages/contact')
+    res.render('pages/contact', {
+        pageName: 'CONTACT'
+    })
 })
 
 app.get('/about', (req, res) => {
-    res.render('pages/about')
+    res.render('pages/about', {
+        pageName: 'ABOUT'
+    })
 })
 
 app.get('/portfolio', (req, res) => {
-    res.render('pages/portfolio')
+    res.render('pages/portfolio', {
+        pageName: 'PORTFOLIO'
+    })
 })
 
 

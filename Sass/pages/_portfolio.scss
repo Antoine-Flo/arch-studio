@@ -1,7 +1,8 @@
 .portfolio {
   @include container;
+  margin-top: 3rem;
   display: grid;
-  gap: 2rem;
+  gap: 2.2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 

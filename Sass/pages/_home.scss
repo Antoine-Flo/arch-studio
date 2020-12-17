@@ -17,16 +17,14 @@
 
   &__img {
     width: 100%;
+    filter: brightness(.6) contrast(1.2);
   }
 
   &__title {
     position: absolute;
     left: 16%;
     top: 23%;
-    line-height: 8rem;
-    font-size: 8rem;
-    color: white;
-    font-family: "Spartan";
+    z-index: 1;
   }
 
   &__info {
@@ -36,7 +34,7 @@
     width: 38%;
     top: 46%;
     font-size: 1.5rem;
-    color: white;
+    color: $very-light-gray;
     font-family: "Spartan";
   }
 
@@ -93,23 +91,17 @@
   position: relative;
   font-family: "Spartan";
 
-  &__title {
-    font-size: 20rem;
-    color: $very-light-gray;
-    font-weight: 700;
-  }
+
 
   &__text {
     width: 40%;
     margin-left: 18%;
-    margin-top: -39px;
+    margin-top: -43px;
   }
 
   &__sub-title {
-    font-size: 5rem;
     margin-bottom: 4rem;
     width: 86%;
-    color: $very-dark-blue;
   }
 
   &__bio {
@@ -142,7 +134,7 @@
     position: absolute;
     width: 100%;
     z-index: -2;
-    filter: brightness(0.5);
+    filter: brightness(0.4);
   }
 
   &__text {
@@ -180,13 +172,6 @@
     align-items: center;
   }
 
-  &__header-txt {
-    font-size: 5rem;
-    font-weight: 700;
-    font-family: "Spartan";
-    color: $very-dark-blue;
-  }
-
   &__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -219,10 +204,6 @@
     position: absolute;
     right: -7px;
     top: 2rem;
-    font-size: 19rem;
-    font-weight: 900;
-    font-family: "Spartan";
-    color: $light-gray;
     opacity: 0.8;
   }
 }

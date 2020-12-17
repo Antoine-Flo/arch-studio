@@ -1,0 +1,30 @@
+.about {
+    @include container;
+
+
+}
+
+.team {
+    position: relative;
+    margin-bottom: 50rem;
+
+    &__title {
+
+    }
+    
+    &__img {
+
+    }
+
+    &__content {
+
+    }
+
+    &__sub-title {
+
+    }
+
+    &__info {
+
+    }
+}

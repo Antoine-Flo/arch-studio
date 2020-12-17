@@ -1,6 +1,28 @@
 .hidden {
   visibility: hidden; }
 
+.h1-l {
+  font-size: 20rem;
+  font-family: "Spartan";
+  color: #f0f0f5;
+  font-weight: 700; }
+
+.h1-s {
+  line-height: 8rem;
+  font-size: 8rem;
+  font-family: "Spartan";
+  color: #f0f0f5; }
+
+.h2 {
+  font-weight: 700;
+  font-size: 5.1rem;
+  font-family: "Spartan";
+  color: #1b1d23; }
+
+.h3 {
+  color: #f0f0f5;
+  font-size: 2rem; }
+
 .btn {
   cursor: pointer;
   background-color: #1b1d23;
@@ -10,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 3.6rem;
+  padding: 2.8rem 3.4rem;
   font-size: 1.6rem; }
   .btn:hover {
     background-color: #7f8490;
@@ -34,9 +56,7 @@
     left: 3.5rem;
     bottom: 3.5rem; }
   .card__label-title {
-    color: #f0f0f5;
-    margin-bottom: 2rem;
-    font-size: 2rem; }
+    margin-bottom: 2rem; }
   .card__label-txt {
     color: #f0f0f5;
     font-size: 1.5rem;
@@ -63,7 +83,7 @@ a {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
-  height: 10rem;
+  height: 15.5rem;
   padding: 2rem 0;
   display: flex;
   align-items: center; }
@@ -141,6 +161,15 @@ a {
     right: 0;
     bottom: 50px; }
 
+.about {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%; }
+
+.team {
+  position: relative;
+  margin-bottom: 50rem; }
+
 .slider {
   margin: 0 auto;
   max-width: 1110px;
@@ -156,15 +185,13 @@ a {
     transition: all 0.2s;
     grid-area: 1 / 1 / 2 / 2; }
   .slider__img {
-    width: 100%; }
+    width: 100%;
+    filter: brightness(0.6) contrast(1.2); }
   .slider__title {
     position: absolute;
     left: 16%;
     top: 23%;
-    line-height: 8rem;
-    font-size: 8rem;
-    color: white;
-    font-family: "Spartan"; }
+    z-index: 1; }
   .slider__info {
     position: absolute;
     left: 16%;
@@ -172,7 +199,7 @@ a {
     width: 38%;
     top: 46%;
     font-size: 1.5rem;
-    color: white;
+    color: #f0f0f5;
     font-family: "Spartan"; }
   .slider__btn {
     position: absolute;
@@ -212,19 +239,13 @@ a {
   margin-bottom: 8rem;
   position: relative;
   font-family: "Spartan"; }
-  .welcome__title {
-    font-size: 20rem;
-    color: #f0f0f5;
-    font-weight: 700; }
   .welcome__text {
     width: 40%;
     margin-left: 18%;
-    margin-top: -39px; }
+    margin-top: -43px; }
   .welcome__sub-title {
-    font-size: 5rem;
     margin-bottom: 4rem;
-    width: 86%;
-    color: #1b1d23; }
+    width: 86%; }
   .welcome__bio {
     font-size: 1.5rem;
     color: #60636c;
@@ -248,7 +269,7 @@ a {
     position: absolute;
     width: 100%;
     z-index: -2;
-    filter: brightness(0.5); }
+    filter: brightness(0.4); }
   .about__text {
     position: absolute;
     display: inline-block;
@@ -277,11 +298,6 @@ a {
     display: inline-flex;
     justify-content: space-between;
     align-items: center; }
-  .featured__header-txt {
-    font-size: 5rem;
-    font-weight: 700;
-    font-family: "Spartan";
-    color: #1b1d23; }
   .featured__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -309,18 +325,15 @@ a {
     position: absolute;
     right: -7px;
     top: 2rem;
-    font-size: 19rem;
-    font-weight: 900;
-    font-family: "Spartan";
-    color: #c9cdd9;
     opacity: 0.8; }
 
 .portfolio {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
+  margin-top: 3rem;
   display: grid;
-  gap: 2rem;
+  gap: 2.2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr); }
   .portfolio__card-1 {

@@ -16,3 +16,31 @@ $very-light-gray: hsl(230, 21%, 95%);
 .hidden {
     visibility: hidden;
 }
+
+///////// Typo ///////////
+
+.h1-l {
+    font-size: 20rem;
+    font-family: "Spartan";
+    color: $very-light-gray;
+    font-weight: 700;
+}
+
+.h1-s {
+    line-height: 8rem;
+    font-size: 8rem;
+    font-family: "Spartan";
+    color: $very-light-gray;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 5.1rem;
+    font-family: "Spartan";
+    color: $very-dark-blue;
+}
+
+.h3 {
+    color: $very-light-gray;
+    font-size: 2rem;
+}
