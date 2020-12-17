@@ -77,6 +77,7 @@
 
 .hide {
   opacity: 0;
+  visibility: hidden;
 }
 
 .open {
@@ -87,7 +88,7 @@
 
 .welcome {
   @include container;
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-bottom: 8rem;
   position: relative;
   font-family: "Spartan";
@@ -133,6 +134,7 @@
 
   &__card {
     position: relative;
+    margin-top: 20rem;
     height: 58rem;
   }
 
@@ -191,12 +193,6 @@
     gap: 2rem;
   }
 
-  &__card {
-    height: 56rem;
-    position: relative;
-    overflow: hidden;
-  }
-
   &__card-1 {
     &::before {
       content: "";
@@ -205,35 +201,18 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      background-image: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.7) 0%,
-          rgba(0, 0, 0, 0) 35%
-        ),
-        url(assets/portfolio/desktop/image-del-sol.jpg);
-      background-size: cover;
+
+      @include card("assets/portfolio/desktop/image-del-sol.jpg");
       filter: contrast(1.3) brightness(0.8) saturate(1.2);
     }
   }
 
   &__card-2 {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0) 35%
-      ),
-      url(assets/portfolio/desktop/image-228b.jpg);
-    background-repeat: no-repeat;
+    @include card("assets/portfolio/desktop/image-228b.jpg");
   }
 
   &__card-3 {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0) 35%
-      ),
-      url(assets/portfolio/desktop/image-prototype.jpg);
-    background-repeat: no-repeat;
+    @include card("assets/portfolio/desktop/image-prototype.jpg");
   }
 
   &__card-num {
@@ -245,24 +224,5 @@
     font-family: "Spartan";
     color: $light-gray;
     opacity: 0.8;
-  }
-
-  &__label {
-    position: absolute;
-    font-family: "Spartan";
-    left: 3.5rem;
-    bottom: 3.5rem;
-  }
-
-  &__label-title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: $very-light-gray;
-  }
-
-  &__label-txt {
-    color: $light-gray;
-    font-size: 1.5rem;
-    color: $very-light-gray;
   }
 }

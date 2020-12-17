@@ -1,0 +1,55 @@
+.portfolio {
+  @include container;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  &__card-1 {
+    @include card("assets/portfolio/desktop/image-seraph.jpg");
+  }
+
+  &__card-2 {
+    @include card("assets/portfolio/desktop/image-eebox.jpg");
+  }
+
+  &__card-3 {
+    @include card("assets/portfolio/desktop/image-federal.jpg");
+  }
+
+  &__card-4 {
+    @include card("assets/portfolio/desktop/image-del-sol.jpg");
+  }
+
+  &__card-5 {
+    @include card("assets/portfolio/desktop/image-prototype.jpg");
+  }
+
+  &__card-6 {
+    @include card("assets/portfolio/desktop/image-228b.jpg");
+  }
+
+  &__card-7 {
+    @include card("assets/portfolio/desktop/image-edelweiss.jpg");
+  }
+
+  &__card-8 {
+    @include card("assets/portfolio/desktop/image-netcry.jpg");
+  }
+
+  &__card-9 {
+    @include card("assets/portfolio/desktop/image-hypers.jpg");
+  }
+
+  &__card-10 {
+    @include card("assets/portfolio/desktop/image-sxiv.jpg");
+  }
+
+  &__card-11 {
+    @include card("assets/portfolio/desktop/image-trinity.jpg");
+  }
+
+  &__card-12 {
+    @include card("assets/portfolio/desktop/image-paramour.jpg");
+  }
+}

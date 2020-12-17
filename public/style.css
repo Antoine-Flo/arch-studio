@@ -13,15 +13,34 @@
   padding: 3rem 3.6rem;
   font-size: 1.6rem; }
   .btn:hover {
-    background-color: #f0f0f5;
-    color: #60636c; }
-  .btn, .btn:link, .btn:visited {
-    border: none; }
+    background-color: #7f8490;
+    color: #f0f0f5; }
+  .btn, .btn:link, .btn:visited, .btn:focus {
+    border: none;
+    outline: none; }
   .btn-arrow {
     width: 20px;
     height: 20px;
     margin-left: 18px;
     filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
+
+.card {
+  height: 56rem;
+  position: relative;
+  overflow: hidden; }
+  .card__label {
+    position: absolute;
+    font-family: "Spartan";
+    left: 3.5rem;
+    bottom: 3.5rem; }
+  .card__label-title {
+    color: #f0f0f5;
+    margin-bottom: 2rem;
+    font-size: 2rem; }
+  .card__label-txt {
+    color: #f0f0f5;
+    font-size: 1.5rem;
+    opacity: .8; }
 
 *,
 *::after,
@@ -36,6 +55,9 @@ body {
 
 html {
   font-size: 62.5%; }
+
+a {
+  text-decoration: none; }
 
 .nav {
   margin: 0 auto;
@@ -77,7 +99,7 @@ html {
       content: "";
       position: absolute;
       top: -139px;
-      left: 12;
+      left: 12px;
       height: 104px;
       width: 1px;
       background-color: #c9cdd9; }
@@ -86,7 +108,38 @@ html {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
-  margin-top: 10rem; }
+  margin-top: 20rem;
+  position: relative; }
+  .footer__nav {
+    display: flex;
+    background-color: #f0f0f5;
+    height: 20rem;
+    width: 89%; }
+  .footer__logo {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1d23; }
+  .footer__logo-svg {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); }
+  .footer__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 6rem; }
+  .footer__item {
+    font-family: 'Spartan';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7f8490;
+    padding: 2rem; }
+    .footer__item:hover {
+      color: #1b1d23; }
+  .footer__btn {
+    position: absolute;
+    right: 0;
+    bottom: 50px; }
 
 .slider {
   margin: 0 auto;
@@ -145,7 +198,8 @@ html {
     left: -81px; }
 
 .hide {
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
 
 .open {
   opacity: 1; }
@@ -154,7 +208,7 @@ html {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-bottom: 8rem;
   position: relative;
   font-family: "Spartan"; }
@@ -188,6 +242,7 @@ html {
   width: 82%; }
   .about__card {
     position: relative;
+    margin-top: 20rem;
     height: 58rem; }
   .about__img {
     position: absolute;
@@ -231,10 +286,6 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem; }
-  .featured__card {
-    height: 56rem;
-    position: relative;
-    overflow: hidden; }
   .featured__card-1::before {
     content: "";
     top: 0;
@@ -242,15 +293,18 @@ html {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-del-sol.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-del-sol.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     filter: contrast(1.3) brightness(0.8) saturate(1.2); }
   .featured__card-2 {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-228b.jpg);
-    background-repeat: no-repeat; }
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-228b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
   .featured__card-3 {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-prototype.jpg);
-    background-repeat: no-repeat; }
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-prototype.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
   .featured__card-num {
     position: absolute;
     right: -7px;
@@ -260,16 +314,60 @@ html {
     font-family: "Spartan";
     color: #c9cdd9;
     opacity: 0.8; }
-  .featured__label {
-    position: absolute;
-    font-family: "Spartan";
-    left: 3.5rem;
-    bottom: 3.5rem; }
-  .featured__label-title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #f0f0f5; }
-  .featured__label-txt {
-    color: #c9cdd9;
-    font-size: 1.5rem;
-    color: #f0f0f5; }
+
+.portfolio {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr); }
+  .portfolio__card-1 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-seraph.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-2 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-eebox.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-federal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-4 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-del-sol.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-5 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-prototype.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-6 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-228b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-7 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-edelweiss.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-8 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-netcry.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-9 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-hypers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-10 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-sxiv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-11 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-trinity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .portfolio__card-12 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url("assets/portfolio/desktop/image-paramour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }

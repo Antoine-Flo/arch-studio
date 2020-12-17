@@ -1,4 +1,49 @@
 .footer {
   @include container;
-  margin-top: 10rem;
+  margin-top: 20rem;
+  position: relative;
+
+  &__nav {
+    display: flex;
+    background-color: $very-light-gray;
+    height: 20rem;
+    width: 89%;
+  }
+
+  &__logo {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $very-dark-blue;
+  }
+
+  &__logo-svg {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+  }
+
+  &__item {
+    font-family: 'Spartan';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $medium-gray;
+    padding: 2rem;
+
+    &:hover {
+      color: $very-dark-blue;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+  }
 }
