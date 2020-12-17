@@ -140,14 +140,13 @@
     position: absolute;
     width: 100%;
     z-index: -2;
-    filter: brightness(.5);
+    filter: brightness(0.5);
   }
-
 
   &__text {
     position: absolute;
     display: inline-block;
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-weight: 700;
     color: $very-light-gray;
     font-size: 5.4rem;
@@ -157,21 +156,113 @@
     margin-left: 17%;
   }
 
-
   &__btn {
     position: absolute;
     margin-top: 29%;
     margin-left: 17%;
     width: 19rem;
   }
-
-  &__btn-arrow {
-    margin-left: 18px;
-  }
 }
+
+///////////////// Featured ////////////////////
 
 .featured {
   @include container;
+  margin-top: 15rem;
 
-  margin-top: 30rem;
+  &__header {
+    width: 100%;
+    margin-bottom: 5rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-txt {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Spartan";
+    color: $very-dark-blue;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__card {
+    height: 56rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__card-1 {
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0) 35%
+        ),
+        url(assets/portfolio/desktop/image-del-sol.jpg);
+      background-size: cover;
+      filter: contrast(1.3) brightness(0.8) saturate(1.2);
+    }
+  }
+
+  &__card-2 {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 35%
+      ),
+      url(assets/portfolio/desktop/image-228b.jpg);
+    background-repeat: no-repeat;
+  }
+
+  &__card-3 {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 35%
+      ),
+      url(assets/portfolio/desktop/image-prototype.jpg);
+    background-repeat: no-repeat;
+  }
+
+  &__card-num {
+    position: absolute;
+    right: -7px;
+    top: 2rem;
+    font-size: 19rem;
+    font-weight: 900;
+    font-family: "Spartan";
+    color: $light-gray;
+    opacity: 0.8;
+  }
+
+  &__label {
+    position: absolute;
+    font-family: "Spartan";
+    left: 3.5rem;
+    bottom: 3.5rem;
+  }
+
+  &__label-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: $very-light-gray;
+  }
+
+  &__label-txt {
+    color: $light-gray;
+    font-size: 1.5rem;
+    color: $very-light-gray;
+  }
 }

@@ -20,6 +20,7 @@
   .btn-arrow {
     width: 20px;
     height: 20px;
+    margin-left: 18px;
     filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
 
 *,
@@ -84,7 +85,8 @@ html {
 .footer {
   margin: 0 auto;
   max-width: 1110px;
-  width: 82%; }
+  width: 82%;
+  margin-top: 10rem; }
 
 .slider {
   margin: 0 auto;
@@ -195,7 +197,7 @@ html {
   .about__text {
     position: absolute;
     display: inline-block;
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-weight: 700;
     color: #f0f0f5;
     font-size: 5.4rem;
@@ -208,11 +210,66 @@ html {
     margin-top: 29%;
     margin-left: 17%;
     width: 19rem; }
-  .about__btn-arrow {
-    margin-left: 18px; }
 
 .featured {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
-  margin-top: 30rem; }
+  margin-top: 15rem; }
+  .featured__header {
+    width: 100%;
+    margin-bottom: 5rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center; }
+  .featured__header-txt {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Spartan";
+    color: #1b1d23; }
+  .featured__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; }
+  .featured__card {
+    height: 56rem;
+    position: relative;
+    overflow: hidden; }
+  .featured__card-1::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-del-sol.jpg);
+    background-size: cover;
+    filter: contrast(1.3) brightness(0.8) saturate(1.2); }
+  .featured__card-2 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-228b.jpg);
+    background-repeat: no-repeat; }
+  .featured__card-3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%), url(assets/portfolio/desktop/image-prototype.jpg);
+    background-repeat: no-repeat; }
+  .featured__card-num {
+    position: absolute;
+    right: -7px;
+    top: 2rem;
+    font-size: 19rem;
+    font-weight: 900;
+    font-family: "Spartan";
+    color: #c9cdd9;
+    opacity: 0.8; }
+  .featured__label {
+    position: absolute;
+    font-family: "Spartan";
+    left: 3.5rem;
+    bottom: 3.5rem; }
+  .featured__label-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #f0f0f5; }
+  .featured__label-txt {
+    color: #c9cdd9;
+    font-size: 1.5rem;
+    color: #f0f0f5; }
