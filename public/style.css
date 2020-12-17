@@ -17,6 +17,10 @@
     color: #60636c; }
   .btn, .btn:link, .btn:visited {
     border: none; }
+  .btn-arrow {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
 
 *,
 *::after,
@@ -123,9 +127,7 @@ html {
     font-weight: 700;
     margin-right: 20px; }
   .slider__btn-arrow {
-    width: 20px;
-    height: 20px;
-    filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg) brightness(108%) contrast(108%); }
+    margin-left: 22px; }
   .slider__num {
     background-color: white;
     color: #7f8490; }
@@ -150,14 +152,67 @@ html {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%;
-  margin-top: 8rem; }
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  position: relative;
+  font-family: "Spartan"; }
+  .welcome__title {
+    font-size: 20rem;
+    color: #f0f0f5;
+    font-weight: 700; }
+  .welcome__text {
+    width: 40%;
+    margin-left: 18%;
+    margin-top: -39px; }
+  .welcome__sub-title {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    width: 86%;
+    color: #1b1d23; }
+  .welcome__bio {
+    font-size: 1.5rem;
+    color: #60636c;
+    line-height: 2.3rem; }
+  .welcome__img {
+    position: absolute;
+    z-index: -2;
+    right: 0;
+    top: 12rem;
+    width: 324px; }
 
 .about {
   margin: 0 auto;
   max-width: 1110px;
   width: 82%; }
+  .about__card {
+    position: relative;
+    height: 58rem; }
+  .about__img {
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    filter: brightness(0.5); }
+  .about__text {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Spartan';
+    font-weight: 700;
+    color: #f0f0f5;
+    font-size: 5.4rem;
+    line-height: 5rem;
+    width: 36rem;
+    margin-top: 16%;
+    margin-left: 17%; }
+  .about__btn {
+    position: absolute;
+    margin-top: 29%;
+    margin-left: 17%;
+    width: 19rem; }
+  .about__btn-arrow {
+    margin-left: 18px; }
 
 .featured {
   margin: 0 auto;
   max-width: 1110px;
-  width: 82%; }
+  width: 82%;
+  margin-top: 30rem; }

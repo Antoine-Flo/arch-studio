@@ -3,7 +3,7 @@
 .btn {
     cursor: pointer;
     background-color: $very-dark-blue;
-    color: $very-ligh-gray;
+    color: $very-light-gray;
     font-family: "Spartan";
     font-weight: 700;
 
@@ -16,7 +16,7 @@
 
     
     &:hover {
-        background-color: $very-ligh-gray;
+        background-color: $very-light-gray;
         color: $dark-gray;
     }
 
@@ -25,4 +25,12 @@
     &:visited {
         border: none;
     }
+
+    &-arrow {
+        width: 20px;
+        height: 20px;
+    
+        filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(70deg)
+          brightness(108%) contrast(108%);
+      }
   }
