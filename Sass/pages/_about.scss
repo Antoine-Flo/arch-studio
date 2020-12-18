@@ -1,30 +1,94 @@
 .about {
-    @include container;
-
-
+  @include container;
 }
 
+////////////////// Team /////////////////
+
 .team {
-    position: relative;
-    margin-bottom: 50rem;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(555px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
 
-    &__title {
+  &__title {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: end;
+    justify-self: end;
+    z-index: 2;
+  }
 
+  &__img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    filter: brightness(0.7);
+    z-index: -2;
+  }
+
+  &__content {
+    margin-left: -5vw;
+    margin-top: -150px;
+
+    display: grid;
+    align-items: flex-end;
+    justify-items: flex-end;
+    background-color: white;
+
+    &-wrapper {
+      width: 70%;
     }
-    
-    &__img {
+  }
 
-    }
+  &__sub-title {
+  }
 
-    &__content {
+  &__info {
+  }
+}
 
-    }
+////////////////// Heritage ////////////////////
 
-    &__sub-title {
+.heritage {
+  display: flex;
+  margin-bottom: 20rem;
 
-    }
+  &__title {
+    width: 50%;
+  }
 
-    &__info {
+  &__info {
+    width: 80%;
+  }
+}
 
-    }
+.leaders {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    width: 5%;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2.8rem;
+    row-gap: 5rem;
+  }
+
+  &__card {
+
+  }
+
+  &__card-title {
+    color: $very-dark-blue;
+    margin-top: 2rem;
+  }
 }
