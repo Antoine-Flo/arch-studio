@@ -13,6 +13,8 @@
   &__content {
     transition: all 0.2s;
     grid-area: 1 / 1 / 2 / 2;
+    opacity: 0;
+    visibility: hidden;
   }
 
   &__img {
@@ -60,8 +62,6 @@
     &:focus {
       outline: none;
       border: none;
-      color: $very-light-gray;
-      background-color: $very-dark-blue;
     }
   }
 
@@ -69,18 +69,22 @@
     display: flex;
     position: absolute;
     bottom: 0;
-    left: -81px;
+    left: -87px;
   }
 }
 
-.hide {
-  opacity: 0;
-  visibility: hidden;
-}
 
 .open {
   opacity: 1;
+  visibility: visible;
 }
+
+.active {
+  color: $very-light-gray;
+  background-color: $very-dark-blue;
+}
+
+
 
 ///////////////// Welcome ////////////////////
 
@@ -90,8 +94,6 @@
   margin-bottom: 8rem;
   position: relative;
   font-family: "Spartan";
-
-
 
   &__text {
     width: 40%;

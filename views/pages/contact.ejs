@@ -1,43 +1,71 @@
 <%- include('../partials/header.ejs'); -%>
 <%- include('../partials/nav.ejs'); -%>
 
-Contact
+<div class="contact">
 
-Portfolio
-About Us
-Contact
+    <div class="tell-us">
 
-Contact
+        <h1 class="tell-us__title h1-l">Contact</h1>
+        <img class="tell-us__img" src="assets/contact/desktop/image-hero.jpg" alt="photo computer">
 
-Tell us about your project
+        <div class="tell-us__content">
+            <div class="tell-us__content-wrapper">
+                <h2 class="tell-us__sub-title h2">Tell us about your project</h2>
+                <p class="tell-us__info body-font">We’d love to hear more about your project. Please, leave a message
+                    below or give
+                    us a call. We have two offices, one in Texas and one in Tennessee. If you find
+                    yourself nearby, come say hello!</p>
+            </div>
+        </div>
 
-We’d love to hear more about your project. Please, leave a message below or give
-us a call. We have two offices, one in Texas and one in Tennessee. If you find
-yourself nearby, come say hello!
-
-Contact Details
-
-Main Office
-Mail: archone@mail.com
-Address: 1892 Chenoweth Drive TN
-Phone: 123-456-3451
-
-View on Map
-
-Office II
-Mail: archtwo@mail.com
-Address: 3399 Wines Lane TX
-Phone: 832-123-4321
-
-View on Map
-
-Connect with us
-
-Name
-Email
-Message
+    </div>
 
 
+    <div class="details">
+
+        <h2 class="h2 details__title">Contact Details</h2>
+
+        <div class="details__lists">
+            <ul class="details__list">
+
+                <li class="details__item details__item-title">Main Office</li>
+                <li class="details__item body-font">Mail: archone@mail.com</li>
+                <li class="details__item body-font">Address: 1892 Chenoweth Drive TN</li>
+                <li class="details__item body-font">Phone: 123-456-3451</li>
+                <li class="details__item">View on Map</li>
+
+            </ul>
+
+            <ul class="details__list">
+                <li class="details__item details__item-title">Office II</li>
+                <li class="details__item body-font">Mail: archtwo@mail.com</li>
+                <li class="details__item body-font">Address: 3399 Wines Lane TX</li>
+                <li class="details__item body-font">Phone: 832-123-4321</li>
+                <li class="details__item">View on Map</li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="assets/contact/desktop/image-map.png" alt="map details">
+
+
+
+    <div class="form">
+
+        <h2 class="h2 form__title">Connect with us</h2>
+
+        <form class="form__items" action="/">
+            <input class="form__item" type="text" placeholder="Name" autocomplete="name" required autofocus>
+            <input class="form__item" type="email" placeholder="Email" autocomplete="email" required>
+            <input class="form__item" type="text" placeholder="Message" required>
+
+            <button class="btn form__btn" type="submit">
+                <img class="btn-arrow form__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon" srcset="">
+            </button>
+        </form>
+    </div>
+
+</div>
 
 
 <%- include('../partials/footer.ejs'); -%>

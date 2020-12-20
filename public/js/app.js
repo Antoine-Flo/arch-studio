@@ -1,28 +1,26 @@
-function slide(id) {
+/////////// Tabs //////////////
 
-    let allSlides = Array.from(document.getElementsByClassName('slider__content'));
-    let targetSlide = document.getElementById("slide-" + id);
-    let button = document.getElementById(id);
+const btns = document.querySelectorAll('.slider__num');
+const about = document.querySelector('.slider')
+const sliders = document.querySelectorAll('.slider__content')
 
 
-    allSlides.forEach(slide => {
-        if (slide.id === targetSlide.id) {
-            slide.classList.add('open')
-            slide.classList.remove('hide')
-            // slide.style.opacity = 0;
-        } else {
-            // console.log("nope " + slide.id + " " + targetSlide.id);
-            slide.classList.add('hide')
-            slide.classList.remove('open')
-        }
+about.addEventListener('click', (e) => {
+    const id = e.target.dataset.id;
+    console.log(id);
+    console.log(btns);
 
-    });
+    if (id) {
+        btns.forEach((btn) => {
+            btn.classList.remove('active')
+            e.target.classList.add('active')
+        })
 
-    // function hide(elements) {
-    //     elements = elements.length ? elements : [elements];
-    //     for (var index = 0; index < elements.length; index++) {
-    //         elements[index].style.display = 'none';
-    //     }
-    // }
+        sliders.forEach((slider) => {
+            slider.classList.remove('open')
+        })
 
-}
+        const element = document.getElementById(id)
+        element.classList.add('open')
+    }
+})
