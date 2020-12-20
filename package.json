@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/style.css -w",
     "devserver": "live-server",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
