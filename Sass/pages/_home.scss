@@ -22,28 +22,32 @@
     filter: brightness(.6) contrast(1.2);
   }
 
-  &__title {
+  &__inside {
     position: absolute;
     left: 16%;
     top: 23%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     z-index: 1;
   }
 
+  &__title {
+    margin-bottom: 3rem;
+  }
+
   &__info {
-    position: absolute;
-    left: 16%;
+    margin-bottom: 2rem;
     line-height: 2.5rem;
     width: 38%;
-    top: 46%;
     font-size: 1.5rem;
     color: $very-light-gray;
     font-family: "Spartan";
   }
 
   &__btn {
-    position: absolute;
-    left: 16%;
-    top: 62%;
+
   }
 
   &__btn-text {

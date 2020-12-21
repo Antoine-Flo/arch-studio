@@ -24,3 +24,31 @@ about.addEventListener('click', (e) => {
         element.classList.add('open')
     }
 })
+
+//////////////// Form ///////////////////
+
+function validateForm() {
+    var formName = document.forms["contact-form"]["name"].value;
+    var formEmail = document.forms["contact-form"]["email"].value;
+    var formMessage = document.forms["contact-form"]["message"].value;
+
+
+
+    if (formName == "") {
+        let nameInput = document.getElementById("form-name");
+        nameInput.classList.add("form__invalid")
+        return false;
+
+    } else if (formEmail == "") {
+
+        let emailInput = document.getElementById("form-email");
+        console.log(emailInput);
+        emailInput.classList.add("form__invalid")
+        return false;
+
+    } else if (formMessage == "") {
+        let emailInput = document.getElementById("form-text");
+        emailInput.classList.add("form__invalid")
+        return false;
+    }
+}

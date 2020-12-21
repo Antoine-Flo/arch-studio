@@ -54,10 +54,19 @@
 
         <h2 class="h2 form__title">Connect with us</h2>
 
-        <form class="form__items" action="/">
-            <input class="form__item" type="text" placeholder="Name" autocomplete="name" required autofocus>
-            <input class="form__item" type="email" placeholder="Email" autocomplete="email" required>
-            <input class="form__item" type="text" placeholder="Message" required>
+        <form class="form__items" name="contact-form" action="#" onsubmit="return validateForm()">
+
+            <div class="form__item">
+                <input id="form-name" name="name" placeholder="Name" class="form__input" type="text"  autocomplete="off">
+            </div>
+
+            <div class="form__item">
+                <input id="form-email" name="email" placeholder="E-mail" class="form__input" type="email"  autocomplete="off">
+            </div>
+
+            <div class="form__item">
+                <input id="form-text" name="message" placeholder="Message" class="form__input" type="text"  autocomplete="off">
+            </div>
 
             <button class="btn form__btn" type="submit">
                 <img class="btn-arrow form__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon" srcset="">

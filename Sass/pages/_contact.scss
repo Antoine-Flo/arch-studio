@@ -76,7 +76,7 @@
 ////////////////// Form /////////////////
 
 .form {
-    position: relative;
+  position: relative;
   display: flex;
   margin-top: 10rem;
 
@@ -88,7 +88,13 @@
   }
 
   &__item {
-    font-family: 'Spartan';
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+
+    font-family: "Spartan";
     padding-left: 2rem;
     font-size: 1.7rem;
     font-weight: 700;
@@ -98,9 +104,9 @@
     // margin: 5rem 0;
 
     &::placeholder {
-        font-family: 'Spartan';
+      margin-bottom: 2rem;
+      font-family: "Spartan";
       color: $light-gray;
-      margin-left: 3rem;
       font-size: 1.7rem;
     }
 
@@ -112,7 +118,6 @@
     }
   }
 
-
   &__btn {
     width: 33px;
     position: absolute;
@@ -121,6 +126,13 @@
   }
 
   &__arrow {
-      margin-left: 0;
+    margin-left: 0;
   }
+}
+
+
+.form__invalid {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid $error-red;
 }
