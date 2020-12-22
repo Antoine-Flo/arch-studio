@@ -130,9 +130,35 @@
   }
 }
 
-
 .form__invalid {
   border: none;
   outline: none;
   border-bottom: 2px solid $error-red;
+
 }
+
+.form__item--invalid::after {
+  content: "Can't be empty";
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  color: $error-red;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.form__empty {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  color: $error-red;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 1.3rem;
+  opacity: 0;
+}
+
+// .form__empty--active {
+//   opacity: 1;
+// }

@@ -329,6 +329,26 @@ li {
   outline: none;
   border-bottom: 2px solid #df5858; }
 
+.form__item--invalid::after {
+  content: "Can't be empty";
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  color: #df5858;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 1.3rem; }
+
+.form__empty {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  color: #df5858;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 1.3rem;
+  opacity: 0; }
+
 .slider {
   margin: 0 auto;
   max-width: 1110px;

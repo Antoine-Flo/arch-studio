@@ -3,12 +3,12 @@
 
 <div class="contact">
 
-    <div class="tell-us">
+    <div class="tell-us" data-aos="fade-right">
 
-        <h1 class="tell-us__title h1-l">Contact</h1>
-        <img class="tell-us__img" src="assets/contact/desktop/image-hero.jpg" alt="photo computer">
+        <h1 class="tell-us__title h1-l" data-aos="fade-right">Contact</h1>
+        <img class="tell-us__img" src="assets/contact/desktop/image-hero.jpg" alt="photo computer" data-aos="fade-left">
 
-        <div class="tell-us__content">
+        <div class="tell-us__content" data-aos="fade-right">
             <div class="tell-us__content-wrapper">
                 <h2 class="tell-us__sub-title h2">Tell us about your project</h2>
                 <p class="tell-us__info body-font">We’d love to hear more about your project. Please, leave a message
@@ -21,7 +21,7 @@
     </div>
 
 
-    <div class="details">
+    <div class="details" data-aos="fade-right">
 
         <h2 class="h2 details__title">Contact Details</h2>
 
@@ -46,27 +46,28 @@
         </div>
     </div>
 
-    <img src="assets/contact/desktop/image-map.png" alt="map details">
+    <img src="assets/contact/desktop/image-map.png" alt="map details" data-aos="fade-left">
 
 
 
-    <div class="form">
+    <div id="form" class="form" data-aos="fade-right">
 
         <h2 class="h2 form__title">Connect with us</h2>
 
         <form class="form__items" name="contact-form" action="#" onsubmit="return validateForm()">
 
             <div class="form__item">
-                <input id="form-name" name="name" placeholder="Name" class="form__input" type="text" autocomplete="off">
-            </div>
-
-            <div class="form__item">
-                <input id="form-email" name="email" placeholder="E-mail" class="form__input" type="email"
+                <input data-id="form-name" name="name" placeholder="Name" class="form__input" type="text"
                     autocomplete="off">
             </div>
 
             <div class="form__item">
-                <input id="form-text" name="message" placeholder="Message" class="form__input" type="text"
+                <input data-id="form-email" name="email" placeholder="E-mail" class="form__input" type="email"
+                    autocomplete="off">
+            </div>
+
+            <div class="form__item">
+                <input data-id="form-text" name="message" placeholder="Message" class="form__input" type="text"
                     autocomplete="off">
             </div>
 
