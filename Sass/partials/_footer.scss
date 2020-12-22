@@ -3,11 +3,19 @@
   margin-top: 20rem;
   position: relative;
 
+  @include respond(laptop) {
+    width: 100%;
+  }
+
   &__nav {
     display: flex;
     background-color: $very-light-gray;
     height: 20rem;
     width: 89%;
+
+    @include respond(laptop) {
+      width: 85%;
+    }
   }
 
   &__logo {
@@ -27,6 +35,10 @@
     display: flex;
     align-items: center;
     margin-left: 6rem;
+
+    @include respond(laptop) {
+      margin-left: 3rem;
+    }
   }
 
   &__item {

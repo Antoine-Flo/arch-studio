@@ -9,11 +9,15 @@
 
         <div class="slider__content open" id="1">
 
-            <img src="assets/home/desktop/image-hero-paramour.jpg" alt="photo federal" class="slider__img">
+            <picture>
+                <source srcset="assets/home/tablet/image-hero-paramour.jpg" media="(max-width: 768px)" />
+                <img src="assets/home/desktop/image-hero-paramour.jpg" alt="photo federal" class="slider__img">
+            </picture>
+
 
             <div class="slider__inside">
                 <h1 class="slider__title h1-s">Project <br> Paramour</h1>
-                <p class="slider__info">
+                <p class="slider__info body-font">
                     Project made for an art museum near Southwest London. Project Paramour is
                     a statement of bold, modern architecture.
                 </p>
@@ -119,14 +123,21 @@
 <div class="about">
 
     <div class="about__card">
-        <img data-aos="fade-right" class="about__img" src="assets/home/desktop/image-small-team.jpg" alt="">
-        <p data-aos="fade-left" data-aos-offset="150" class="about__text">
-            Small team, big ideas
-        </p>
 
-        <div data-aos="fade-left" data-aos-offset="150" class="about__btn btn">
-            About Us
-            <img class="about__btn-arrow btn-arrow" src="assets/icons/icon-arrow.svg" alt="" srcset="">
+        <picture data-aos="fade-right">
+            <source srcset="assets/home/tablet/image-small-team.jpg" media="(max-width: 768px)" />
+            <img class="about__img" src="assets/home/desktop/image-small-team.jpg" alt="photo team">
+        </picture>
+
+        <div class="about__inside">
+            <p data-aos="fade-left" data-aos-offset="150" class="about__text h2">
+                Small team, big ideas
+            </p>
+
+            <div data-aos="fade-left" data-aos-offset="150" class="about__btn btn">
+                <p>About Us</p>
+                <img class="about__btn-arrow btn-arrow" src="assets/icons/icon-arrow.svg" alt="" srcset="">
+            </div>
         </div>
     </div>
 
@@ -162,8 +173,8 @@
             </div>
         </div>
 
-        <div class="card featured__card-2" data-aos="flip-left" data-aos-offset="200">
-            <p class="featured__card-num">
+        <div class="card featured__card-2" data-aos="flip-left" data-aos-offset="150">
+            <p class="featured__card-num h1-l">
                 2
             </p>
             <div class="card__label">
@@ -176,8 +187,8 @@
             </div>
         </div>
 
-        <div class="card featured__card-3" data-aos="flip-left" data-aos-offset="400">
-            <p class="featured__card-num">
+        <div class="card featured__card-3" data-aos="flip-left" data-aos-offset="300">
+            <p class="featured__card-num h1-l">
                 3
             </p>
             <div class="card__label">

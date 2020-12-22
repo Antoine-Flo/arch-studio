@@ -9,9 +9,7 @@ const formInputs = document.querySelectorAll('.form__input');
 // const emptyTexts = document.querySelectorAll('.form__empty');
 
 
-form.addEventListener('keydown', (e) => {
-    const id = e.target.dataset.id;
-
+btn.addEventListener('click', (e) => {
 
     formInputs.forEach(input => {
 
@@ -19,6 +17,7 @@ form.addEventListener('keydown', (e) => {
         if(!input.value) {
             input.classList.add("form__invalid")
             input.parentNode.classList.add("form__item--invalid")
+            e.preventDefault();
         } else {
             input.classList.remove("form__invalid")
             input.parentNode.classList.remove("form__item--invalid")

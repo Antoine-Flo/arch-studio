@@ -6,51 +6,85 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 
+  @include respond(laptop) {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  @include respond(tab) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+
   &__card-1 {
-    @include card("assets/portfolio/desktop/image-seraph.jpg");
+    @include card("assets/portfolio/desktop/image-seraph.jpg",
+    "assets/portfolio/tablet/image-seraph.jpg"
+    );
   }
 
   &__card-2 {
-    @include card("assets/portfolio/desktop/image-eebox.jpg");
+    @include card("assets/portfolio/desktop/image-eebox.jpg",
+    "assets/portfolio/tablet/image-eebox.jpg"
+    );
   }
 
   &__card-3 {
-    @include card("assets/portfolio/desktop/image-federal.jpg");
+    @include card("assets/portfolio/desktop/image-federal.jpg",
+    "assets/portfolio/tablet/image-federal.jpg"
+    );
   }
 
   &__card-4 {
-    @include card("assets/portfolio/desktop/image-del-sol.jpg");
+    @include card("assets/portfolio/desktop/image-del-sol.jpg",
+    "assets/portfolio/tablet/image-del-sol.jpg"
+    );
   }
 
   &__card-5 {
-    @include card("assets/portfolio/desktop/image-prototype.jpg");
+    @include card("assets/portfolio/desktop/image-prototype.jpg",
+    "assets/portfolio/tablet/image-prototype.jpg"
+    );
   }
 
   &__card-6 {
-    @include card("assets/portfolio/desktop/image-228b.jpg");
+    @include card("assets/portfolio/desktop/image-228b.jpg",
+    "assets/portfolio/tablet/image-228b.jpg"
+    );
   }
 
   &__card-7 {
-    @include card("assets/portfolio/desktop/image-edelweiss.jpg");
+    @include card("assets/portfolio/desktop/image-edelweiss.jpg",
+    "assets/portfolio/tablet/image-edelweiss.jpg"
+    );
   }
 
   &__card-8 {
-    @include card("assets/portfolio/desktop/image-netcry.jpg");
+    @include card("assets/portfolio/desktop/image-netcry.jpg",
+    "assets/portfolio/tablet/image-netcry.jpg"
+    );
   }
 
   &__card-9 {
-    @include card("assets/portfolio/desktop/image-hypers.jpg");
+    @include card("assets/portfolio/desktop/image-hypers.jpg",
+    "assets/portfolio/tablet/image-hypers.jpg"
+    );
   }
 
   &__card-10 {
-    @include card("assets/portfolio/desktop/image-sxiv.jpg");
+    @include card("assets/portfolio/desktop/image-sxiv.jpg",
+    "assets/portfolio/tablet/image-sxiv.jpg"
+    );
   }
 
   &__card-11 {
-    @include card("assets/portfolio/desktop/image-trinity.jpg");
+    @include card("assets/portfolio/desktop/image-trinity.jpg",
+    "assets/portfolio/tablet/image-trinity.jpg"
+    );
   }
 
   &__card-12 {
-    @include card("assets/portfolio/desktop/image-paramour.jpg");
+    @include card("assets/portfolio/desktop/image-paramour.jpg",
+    "assets/portfolio/tablet/image-paramour.jpg"
+    );
   }
 }

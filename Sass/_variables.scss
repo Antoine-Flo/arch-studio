@@ -6,53 +6,109 @@ $medium-gray: hsl(223, 7%, 53%);
 $light-gray: hsl(225, 17%, 82%);
 $very-light-gray: hsl(230, 21%, 95%);
 
-$error-red : hsl(0, 68%, 61%);
+$error-red: hsl(0, 68%, 61%);
+
+////// MEDIA QUERY MANAGER ///////
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1113px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
 
 @mixin container {
-    margin: 0 auto;
-    max-width: 1110px;
-    width: 82%;
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 82%;
+
+  @include respond(laptop) {
+    width: 76%;
+  }
 }
 
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 ///////// Typo ///////////
 
 .h1-l {
-    font-size: 20rem;
-    font-family: "Spartan";
-    color: $very-light-gray;
-    font-weight: 700;
+  font-size: 20rem;
+  font-family: "Spartan";
+  color: $very-light-gray;
+  font-weight: 700;
+
+  @include respond(laptop) {
+    font-size: 15rem;
+  }
+
+  @include respond(tab) {
+    font-size: 13rem;
+  }
 }
 
 .h1-s {
-    line-height: 8rem;
-    font-size: 8rem;
-    font-family: "Spartan";
-    color: $very-light-gray;
+  line-height: 8rem;
+  font-size: 8rem;
+  font-family: "Spartan";
+  color: $very-light-gray;
+
+  @include respond(laptop) {
+    font-size: 7.8rem;
+  }
+  @include respond(tab) {
+    font-size: 7.6rem;
+  }
+  @include respond(phone) {
+    font-size: 7.4rem;
+  }
 }
 
 .h2 {
-    font-weight: 700;
-    margin-bottom: 5rem;
-    font-size: 5.1rem;
-    font-family: "Spartan";
-    color: $very-dark-blue;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  font-size: 5.1rem;
+  font-family: "Spartan";
+  color: $very-dark-blue;
+
+  @include respond(laptop) {
+    font-size: 4.8rem;
+  }
+  @include respond(tab) {
+    font-size: 4.5rem;
+  }
+  @include respond(phone) {
+    font-size: 4.2rem;
+  }
 }
 
 .h3 {
-    color: $very-light-gray;
-    font-size: 2rem;
-    font-family: "Spartan";
+  color: $very-light-gray;
+  font-size: 2rem;
+  font-family: "Spartan";
 }
 
 .body-font {
-    line-height: 2.5rem;
-    color: $medium-gray;
-    font-family: "Spartan";
-    font-weight: 500;
-    font-size: 1.5rem;
-
+  line-height: 2.5rem;
+  color: $medium-gray;
+  font-family: "Spartan";
+  font-weight: 500;
+  font-size: 1.5rem;
 }
