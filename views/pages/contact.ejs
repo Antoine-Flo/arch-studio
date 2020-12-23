@@ -6,7 +6,13 @@
     <div class="tell-us" data-aos="fade-right">
 
         <h1 class="tell-us__title h1-l" data-aos="fade-right">Contact</h1>
-        <img class="tell-us__img" src="assets/contact/desktop/image-hero.jpg" alt="photo computer" data-aos="fade-left">
+
+
+        <picture data-aos="fade-left">
+            <source class="tell-us__img" srcset="assets/contact/tablet/image-hero.jpg" media="(max-width: 768px)" />
+            <img class="tell-us__img" src="assets/contact/desktop/image-hero.jpg" alt="photo computer"
+                data-aos="fade-left">
+        </picture>
 
         <div class="tell-us__content" data-aos="fade-right">
             <div class="tell-us__content-wrapper">
@@ -32,7 +38,8 @@
                 <li class="details__item body-font">Mail: archone@mail.com</li>
                 <li class="details__item body-font">Address: 1892 Chenoweth Drive TN</li>
                 <li class="details__item body-font">Phone: 123-456-3451</li>
-                <li class="details__item">View on Map</li>
+                <li class="details__item details__item-cta">View on Map
+                    <img class="btn-arrow details__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon"></li>
 
             </ul>
 
@@ -41,12 +48,22 @@
                 <li class="details__item body-font">Mail: archtwo@mail.com</li>
                 <li class="details__item body-font">Address: 3399 Wines Lane TX</li>
                 <li class="details__item body-font">Phone: 832-123-4321</li>
-                <li class="details__item">View on Map</li>
+                <li class="details__item details__item-cta">
+
+                        <p>View on Map</p>
+                        <img class="btn-arrow details__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon">
+
+                </li>
             </ul>
         </div>
     </div>
 
-    <img src="assets/contact/desktop/image-map.png" alt="map details" data-aos="fade-left">
+
+
+    <picture data-aos="fade-left">
+        <source class="contact__map" srcset="assets/contact/tablet/image-map.png" media="(max-width: 768px)" />
+        <img class="contact__map" src="assets/contact/desktop/image-map.png" alt="map details" data-aos="fade-left">
+    </picture>
 
 
 
@@ -57,22 +74,19 @@
         <form class="form__items" name="contact-form" action="#" onsubmit="return validateForm()">
 
             <div class="form__item">
-                <input name="name" placeholder="Name" class="form__input" type="text"
-                    autocomplete="off">
+                <input name="name" placeholder="Name" class="form__input" type="text" autocomplete="off">
             </div>
 
             <div class="form__item">
-                <input name="email" placeholder="E-mail" class="form__input" type="email"
-                    autocomplete="off">
+                <input name="email" placeholder="E-mail" class="form__input" type="email" autocomplete="off">
             </div>
 
             <div class="form__item">
-                <input name="message" placeholder="Message" class="form__input" type="text"
-                    autocomplete="off">
+                <input name="message" placeholder="Message" class="form__input" type="text" autocomplete="off">
             </div>
 
             <button class="btn form__btn" type="submit">
-                <img class="btn-arrow form__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon" srcset="">
+                <img class="btn-arrow form__arrow" src="assets/icons/icon-arrow.svg" alt="arrow icon">
             </button>
         </form>
     </div>

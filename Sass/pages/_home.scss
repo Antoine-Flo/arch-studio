@@ -126,6 +126,12 @@
   position: relative;
   font-family: "Spartan";
 
+  &__title {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
   &__text {
     width: 40%;
     margin-left: 18%;
@@ -200,7 +206,7 @@
     margin-left: 17%;
 
     @include respond(laptop) {
-      margin-top: 12%;
+      margin-top: 10%;
     }
 
     @include respond(tab) {
@@ -211,10 +217,9 @@
 
   &__text {
     color: $very-light-gray;
-    width: 36rem;
+    width: 41rem;
 
     @include respond(tab) {
-      font-size: 6.3rem;
       width: 49rem;
     }
   }

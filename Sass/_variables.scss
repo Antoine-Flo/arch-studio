@@ -16,6 +16,13 @@ $error-red: hsl(0, 68%, 61%);
       @content;
     }
   }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 692px) {
+      @content;
+    }
+  }
+  
   @if $breakpoint == tab {
     @media only screen and (max-width: 768px) {
       @content;
@@ -26,11 +33,7 @@ $error-red: hsl(0, 68%, 61%);
       @content;
     }
   }
-  @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
-      @content;
-    }
-  }
+
 }
 
 @mixin container {
@@ -84,18 +87,20 @@ $error-red: hsl(0, 68%, 61%);
 .h2 {
   font-weight: 700;
   margin-bottom: 4rem;
-  font-size: 5.1rem;
+  font-size: 6rem;
   font-family: "Spartan";
   color: $very-dark-blue;
 
-  @include respond(laptop) {
-    font-size: 4.8rem;
-  }
-  @include respond(tab) {
+ 
+  
+
+
+  @include respond(tab-port) {
     font-size: 4.5rem;
   }
+
   @include respond(phone) {
-    font-size: 4.2rem;
+    font-size: 3rem;
   }
 }
 

@@ -16,6 +16,18 @@
     @include respond(laptop) {
       width: 85%;
     }
+
+    @include respond(tab) {
+      height: 16rem;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+
+      height: 43rem;
+      width: 100%;
+    }
+
   }
 
   &__logo {
@@ -24,10 +36,28 @@
     align-items: center;
     justify-content: center;
     background-color: $very-dark-blue;
+
+    @include respond(tab) {
+      width: 16rem;
+    }
+
+    @include respond(tab-port) {
+      margin: -5rem auto 0;
+      width: 15rem;
+      height: 15rem;
+    }
   }
 
   &__logo-svg {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+
+    @include respond(laptop) {
+      width: 10rem;
+    }
+
+    @include respond(tab) {
+      width: 8rem;
+    }
   }
 
   &__list {
@@ -38,6 +68,12 @@
 
     @include respond(laptop) {
       margin-left: 3rem;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 2rem;
     }
   }
 
@@ -57,5 +93,15 @@
     position: absolute;
     right: 0;
     bottom: 50px;
+
+    @include respond(tab) {
+      bottom: 39px;
+    }
+
+    @include respond(tab-port) {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+    }
   }
 }
