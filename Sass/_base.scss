@@ -20,8 +20,12 @@ html {
   @include respond(tab) {
     font-size: 56%;
   }
-  @include respond(phone) {
+  @include respond(phoneL) {
     font-size: 52%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
   }
 }
 

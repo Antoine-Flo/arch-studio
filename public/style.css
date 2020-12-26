@@ -24,9 +24,12 @@
   @media only screen and (max-width: 768px) {
     .h1-s {
       font-size: 7.6rem; } }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 479px) {
     .h1-s {
       font-size: 7.4rem; } }
+  @media only screen and (max-width: 479px) {
+    .h1-s {
+      font-size: 7rem; } }
 
 .h2 {
   font-weight: 700;
@@ -37,9 +40,6 @@
   @media only screen and (max-width: 692px) {
     .h2 {
       font-size: 4.5rem; } }
-  @media only screen and (max-width: 425px) {
-    .h2 {
-      font-size: 3rem; } }
 
 .h3 {
   color: #f0f0f5;
@@ -120,9 +120,12 @@ html {
   @media only screen and (max-width: 768px) {
     html {
       font-size: 56%; } }
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 621px) {
     html {
       font-size: 52%; } }
+  @media only screen and (max-width: 479px) {
+    html {
+      font-size: 50%; } }
 
 a {
   text-decoration: none; }
@@ -141,24 +144,150 @@ li {
   @media only screen and (max-width: 1113px) {
     .nav {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .nav {
+      width: 90%; } }
+  @media only screen and (max-width: 621px) {
+    .nav {
+      width: 90%; } }
   .nav__logo {
     margin-right: 5rem; }
+    @media only screen and (max-width: 692px) {
+      .nav__logo {
+        margin-right: 4.5rem; } }
   .nav__links {
     display: flex; }
+    @media only screen and (max-width: 479px) {
+      .nav__links {
+        visibility: hidden;
+        opacity: 0; } }
   .nav__link {
     margin: 3rem;
     font-size: 1.5rem;
     font-family: "Spartan";
     color: #7f8490;
     font-weight: bold; }
+    @media only screen and (max-width: 692px) {
+      .nav__link {
+        margin: 2.4rem;
+        font-size: 1.3rem; } }
     .nav__link, .nav__link:visited, .nav__link:link {
       text-decoration: none; }
+
+#menuToggle {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none; }
+  @media only screen and (max-width: 479px) {
+    #menuToggle {
+      visibility: visible; } }
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  font-family: 'Spartan';
+  font-weight: 700;
+  transition: color 0.3s ease; }
+
+#menuToggle a:hover {
+  color: var(--cyan); }
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none; }
+
+/*
+  * Just a quick hamburger
+  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: absolute;
+  right: 40px;
+  background: #232323;
+  border-radius: 3px;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+
+#menuToggle span:nth-child(2) {
+  transform-origin: 0% 100%;
+  top: 60px; }
+
+#menuToggle span:nth-child(3) {
+  top: 70px; }
+
+#menuToggle span:nth-child(4) {
+  transform-origin: 0% 100%;
+  top: 80px; }
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #232323; }
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg); }
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+#menu {
+  position: absolute;
+  top: 224px;
+  right: -150px;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 40px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(50%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+
+#menu li {
+  padding: 10px 0;
+  font-size: 2rem; }
+
+/*
+  * And let's slide it in from the left
+  */
+#menuToggle input:checked ~ ul {
+  transform: translate(-40%, 0); }
 
 .home {
   position: relative;
   width: 90%;
   max-width: 1400px;
   margin: 0 auto; }
+  @media only screen and (max-width: 621px) {
+    .home {
+      opacity: 0; } }
   .home__link {
     position: absolute;
     top: 14rem;
@@ -187,6 +316,9 @@ li {
   @media only screen and (max-width: 1113px) {
     .footer {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .footer {
+      width: 90%; } }
   @media only screen and (max-width: 1113px) {
     .footer {
       width: 100%; } }
@@ -269,6 +401,9 @@ li {
   @media only screen and (max-width: 1113px) {
     .about {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .about {
+      width: 90%; } }
 
 .team {
   position: relative;
@@ -364,6 +499,9 @@ li {
   @media only screen and (max-width: 1113px) {
     .contact {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .contact {
+      width: 90%; } }
   .contact__map {
     width: 100%; }
 
@@ -461,7 +599,7 @@ li {
           position: absolute;
           right: 0;
           top: 53px; } }
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 479px) {
         .details__item-cta {
           position: relative;
           top: 0; } }
@@ -544,6 +682,12 @@ li {
   @media only screen and (max-width: 1113px) {
     .slider {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .slider {
+      width: 90%; } }
+  @media only screen and (max-width: 621px) {
+    .slider {
+      width: 100%; } }
   .slider__cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -580,8 +724,17 @@ li {
     @media only screen and (max-width: 768px) {
       .slider__inside {
         top: 28%; } }
+    @media only screen and (max-width: 621px) {
+      .slider__inside {
+        left: 8%; } }
   .slider__title {
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 621px) {
+      .slider__title {
+        margin-bottom: 2.7rem; } }
+    @media only screen and (max-width: 479px) {
+      .slider__title {
+        margin-bottom: 2rem; } }
   .slider__info {
     margin-bottom: 2rem;
     line-height: 2.5rem;
@@ -638,6 +791,12 @@ li {
   @media only screen and (max-width: 1113px) {
     .welcome {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .welcome {
+      width: 90%; } }
+  @media only screen and (max-width: 479px) {
+    .welcome {
+      margin-top: 15rem; } }
   @media only screen and (max-width: 692px) {
     .welcome__title {
       display: none; } }
@@ -682,6 +841,15 @@ li {
   @media only screen and (max-width: 1113px) {
     .about {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .about {
+      width: 90%; } }
+  @media only screen and (max-width: 621px) {
+    .about {
+      width: 100%; } }
+  @media only screen and (max-width: 479px) {
+    .about {
+      margin-top: 10rem; } }
   .about__card {
     position: relative;
     margin-top: 20rem;
@@ -711,6 +879,9 @@ li {
     @media only screen and (max-width: 768px) {
       .about__text {
         width: 49rem; } }
+    @media only screen and (max-width: 621px) {
+      .about__text {
+        font-size: 6rem; } }
 
 .featured {
   margin: 0 auto;
@@ -720,6 +891,9 @@ li {
   @media only screen and (max-width: 1113px) {
     .featured {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .featured {
+      width: 90%; } }
   .featured__header {
     width: 100%;
     margin-bottom: 5rem;
@@ -781,6 +955,9 @@ li {
   @media only screen and (max-width: 1113px) {
     .portfolio {
       width: 76%; } }
+  @media only screen and (max-width: 479px) {
+    .portfolio {
+      width: 90%; } }
   @media only screen and (max-width: 1113px) {
     .portfolio {
       grid-template-columns: repeat(2, 1fr); } }
