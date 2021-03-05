@@ -1,6 +1,13 @@
-Un projet basé sur un design fournis par le site front-end mentor (un site fantastique).
+# Le projet
 
-Visitez le site : https://arch-studio.herokuapp.com
+C'est un site multi-page qui respecte un design graphique fournis. Le site [front-end mentor](https://www.frontendmentor.io/) qui reproduis un environement professionel est à l'origine du design.
 
-Back-end : Node.js / Express;
+
+# Visitez le site
+
+https://arch-studio.herokuapp.com
+
+# Le stack
+
+Back-end : EJS / Node.js / Express;
 Fron-end : Sass
