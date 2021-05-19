@@ -10,5 +10,6 @@ https://arch-studio.herokuapp.com
 
 ## Le stack
 
-Back-end : EJS / Node.js / Express
+Back-end : EJS / Node.js / Express 
+
 Front-end : Sass
